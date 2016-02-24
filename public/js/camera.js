@@ -1,8 +1,10 @@
 function initCamera() {
   //Uncomment and fill in the correct selectors below.
-  //capture($('<Your code here>'),
-  //        $('<Your code here>'),
-  //        $('<Your code here>'));
+    console.log("initiating camera...");
+  capture($('#camera-video'),
+          $('#camera-canvas'),
+          $('#camera-button'));
+  // disableCamera();
 }
 
 function capture(video, canvas, snapshotButton) {
@@ -24,6 +26,7 @@ function capture(video, canvas, snapshotButton) {
         canvas.attr('width', width);
         canvas.attr('height', height);
         ctx.drawImage(video[0], 0, 0, width, height);
+
     });
   };
 
